@@ -1,0 +1,25 @@
+<div id="main" class="papers">
+
+<h1 itemprop="name">Reading List</h1>
+<% site.pages.sort('title').each(function(item){ %>
+  <% if (item.layout=='paper_list') { %>
+    <section class="papers">
+    <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
+    <%= item.title %>
+  <% } %>
+    </a>
+    </section>
+<% }); %>
+
+<h1 itemprop="name">Papers</h1>
+<% site.pages.sort('title').each(function(item){ %>
+  <% if (item.layout=='single_paper') { %>
+    <section class="papers">
+    <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
+    <%= item.title %>
+  <% } %>
+    </a>
+    </section>
+<% }); %>
+
+</div>

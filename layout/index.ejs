@@ -1,6 +1,8 @@
 <div id="main">
 <% page.posts.each(function(item){ %>
+<!--  <% if (item.categories && item.categories!='Paper') { %> -->
   <%- partial('_partial/article', {item: item, index: true,desc: true}) %>
+<!--  <% } %> -->
 <% }); %>
 <% if (page.total > 1){ %>
   <nav id="page-nav" class="clearfix<% if (theme.index.expand != true) { %> unexpand<% } %>">
