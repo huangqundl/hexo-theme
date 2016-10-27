@@ -81,33 +81,7 @@
       <%- partial('_partial/after_footer') %>
     </body>
    </html>
-<% } else if(page.layout=='papers'){ %>
- <%- partial('_partial/head') %>
-    <body>
-      <header>
-        <%- partial('_partial/header') %>
-      </header>
-      <div id="container">
-        <%- body %>
-      </div>
-      <footer><%- partial('_partial/footer') %></footer>
-      <%- partial('_partial/after_footer') %>
-    </body>
-   </html>
-<% } else if(page.layout=='paper_list'){ %>
- <%- partial('_partial/head') %>
-    <body>
-      <header>
-        <%- partial('_partial/header') %>
-      </header>
-      <div id="container">
-        <%- body %>
-      </div>
-      <footer><%- partial('_partial/footer') %></footer>
-      <%- partial('_partial/after_footer') %>
-    </body>
-   </html>
-<% } else if(page.layout=='single_paper'){ %>
+<% } else if(page.layout=='papers'||page.layout=='paper_year'||page.layout=='paper_topic'||page.layout=='single_paper'){ %>
  <%- partial('_partial/head') %>
     <body>
       <header>

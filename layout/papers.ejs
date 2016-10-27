@@ -1,8 +1,19 @@
 <div id="main" class="papers">
 
-<h1 itemprop="name">Reading List</h1>
+<h1 itemprop="name">By Year</h1>
 <% site.pages.sort('title').each(function(item){ %>
-  <% if (item.layout=='paper_list') { %>
+  <% if (item.layout=='paper_year') { %>
+    <section class="papers">
+    <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
+    <%= item.title %>
+  <% } %>
+    </a>
+    </section>
+<% }); %>
+
+<h1 itemprop="name">By Topics</h1>
+<% site.pages.sort('title').each(function(item){ %>
+  <% if (item.layout=='paper_topic') { %>
     <section class="papers">
     <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
     <%= item.title %>
