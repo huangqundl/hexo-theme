@@ -41,7 +41,21 @@
         display block
         margin 0.5em 0
         font-size 0.9em
-  section.papers
+  section.paper_main
+    background color-section
+    margin-bottom 0.125em
+    a
+      display block
+      border-left 0.5em solid color-gray
+      transition border-left .45s
+      padding-left 0.5em
+      @media mini
+        padding 0em
+      &:hover
+        border-left 5em solid color-theme
+      p
+        color color-font
+  section.diary_main
     background color-section
     margin-bottom 0.125em
     a
@@ -159,8 +173,8 @@
 .page
   @media tablet
     margin-left 10% !important
-/*! papers layout */
-.papers
+/*! paper_main layout */
+.paper_main
   @media tablet
     margin-left 10% !important
 .paper_year
@@ -170,6 +184,15 @@
   @media tablet
     margin-left 10% !important
 .single_paper
+  @media tablet
+    margin-left 10% !important
+.diary_main
+  @media tablet
+    margin-left 10% !important
+.diary_current
+  @media tablet
+    margin-left 10% !important
+.diary_archive
   @media tablet
     margin-left 10% !important
 

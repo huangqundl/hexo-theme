@@ -1,0 +1,29 @@
+<div id="main" class="diary_main">
+
+<h1 itemprop="name">Recent</h1>
+<% site.pages.sort('title').each(function(item){ %>
+  <% if (item.layout=='diary_current') { %>
+
+<div id="diary_current" class="<%= item.layout %>" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+	<div class="article-content">
+		<%- item.content %>  
+	</div>
+	</article>
+</div>  
+
+  <% } %>
+<% }); %>
+
+<h1 itemprop="name">Archives</h1>
+<% site.pages.sort('title').each(function(item){ %>
+  <% if (item.layout=='diary_archive') { %>
+    <section class="diary_main">
+    <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
+    <%= item.title %>
+    </a>
+    </section>
+  <% } %>
+<% }); %>
+
+</div>

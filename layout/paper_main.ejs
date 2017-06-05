@@ -1,36 +1,36 @@
-<div id="main" class="papers">
+<div id="main" class="paper_main">
 
 <h1 itemprop="name">By Year</h1>
 <% site.pages.sort('title').each(function(item){ %>
   <% if (item.layout=='paper_year') { %>
-    <section class="papers">
+    <section class="paper_main">
     <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
     <%= item.title %>
-  <% } %>
     </a>
     </section>
+  <% } %>
 <% }); %>
 
 <h1 itemprop="name">By Topics</h1>
 <% site.pages.sort('title').each(function(item){ %>
   <% if (item.layout=='paper_topic') { %>
-    <section class="papers">
+    <section class="paper_main">
     <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
     <%= item.title %>
-  <% } %>
     </a>
     </section>
+  <% } %>
 <% }); %>
 
 <h1 itemprop="name">Papers</h1>
 <% site.pages.sort('title').each(function(item){ %>
   <% if (item.layout=='single_paper') { %>
-    <section class="papers">
+    <section class="paper_main">
     <a href="<%- config.root %><%- item.path %>" title="<%= item.title %>" itemprop="url">
     <%= item.title %>
-  <% } %>
     </a>
     </section>
+  <% } %>
 <% }); %>
 
 </div>

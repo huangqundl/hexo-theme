@@ -7,6 +7,7 @@ menu:
   About: /about
   Diary: /diary
   Paper Reading: /papers
+  Idea: /idea
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
